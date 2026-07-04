@@ -35,8 +35,11 @@
       gtag("js", new Date());
       gtag("config", "G-BH8V4Y4GWW");
     </script>
-    <script data-goatcounter="https://fraxhost.goatcounter.com/count"
-            async src="//gc.zgo.at/count.js"></script>
+    <script
+      data-goatcounter="https://fraxhost.goatcounter.com/count"
+      async
+      src="//gc.zgo.at/count.js"
+    ></script>
   </head>
   <body>
     <!-- Mobile navbar (hidden ≥ 1020px) -->
@@ -63,11 +66,10 @@
 
     <!-- Mobile nav dropdown -->
     <div class="navbar-menu" id="navbar-menu">
-      <a href="/" {% if page.active == "about" %} class="active" {% endif %}>About</a>
+      <a href="/" {% if page.active == "about" %} class="active" {% endif %}>About Me</a>
       <a href="/html/publication.html" {% if page.active == "publication" %} class="active" {% endif %}>Publications</a>
       <a href="/html/project.html" {% if page.active == "project" %} class="active" {% endif %}>Projects</a>
       <a href="/html/experience.html" {% if page.active == "experience" %} class="active" {% endif %}>Experience</a>
-      <a href="/html/education.html" {% if page.active == "education" %} class="active" {% endif %}>Education</a>
       <a href="/html/skill.html" {% if page.active == "skill" %} class="active" {% endif %}>Skills &amp; Certs</a>
       <a href="/html/extracurricular.html" {% if page.active == "extracurricular" %} class="active" {% endif %}>Service</a>
       <a href="/html/blog.html" {% if page.active == "blog" %} class="active" {% endif %}>Blog</a>
@@ -97,7 +99,7 @@
             </button>
           </div>
           <p class="sidebar-bio">
-            PhD Candidate, Computer Science &middot; University of Alabama
+            Graduate Research Assistant, University of Alabama
           </p>
         </div>
 
@@ -109,32 +111,22 @@
               <i class="fas fa-user fa-fw" style="color: #58a6ff"></i> About
             </a>
             <a href="/html/publication.html" {% if page.active == "publication" %} class="active" {% endif %}>
-              <i class="fas fa-file-alt fa-fw" style="color: #ffa657"></i>
-              Publications
+              <i class="fas fa-file-alt fa-fw" style="color: #ffa657"></i> Publications
             </a>
             <a href="/html/project.html" {% if page.active == "project" %} class="active" {% endif %}>
-              <i class="fas fa-laptop fa-fw" style="color: #3fb950"></i>
-              Projects
+              <i class="fas fa-laptop fa-fw" style="color: #3fb950"></i> Projects
             </a>
             <a href="/html/experience.html" {% if page.active == "experience" %} class="active" {% endif %}>
-              <i class="fas fa-briefcase fa-fw" style="color: #d2a8ff"></i>
-              Experience
-            </a>
-            <a href="/html/education.html" {% if page.active == "education" %} class="active" {% endif %}>
-              <i class="fas fa-graduation-cap fa-fw" style="color: #ff7b72"></i>
-              Education
+              <i class="fas fa-briefcase fa-fw" style="color: #d2a8ff"></i> Experience
             </a>
             <a href="/html/skill.html" {% if page.active == "skill" %} class="active" {% endif %}>
-              <i class="fas fa-code fa-fw" style="color: #79c0ff"></i> Skills
-              &amp; Certs
+              <i class="fas fa-code fa-fw" style="color: #79c0ff"></i> Skills &amp; Certs
             </a>
             <a href="/html/extracurricular.html" {% if page.active == "extracurricular" %} class="active" {% endif %}>
-              <i class="fas fa-handshake fa-fw" style="color: #f778ba"></i>
-              Service
+              <i class="fas fa-handshake fa-fw" style="color: #f778ba"></i> Service
             </a>
             <a href="/html/blog.html" {% if page.active == "blog" %} class="active" {% endif %}>
-              <i class="fas fa-pen-nib fa-fw" style="color: #e2b96f"></i>
-              Blog
+              <i class="fas fa-pen-nib fa-fw" style="color: #e2b96f"></i> Blog
             </a>
           </nav>
         </div>
@@ -194,11 +186,18 @@
           <span class="sidebar-views-label">views</span>
         </div>
         <script>
-          fetch('https://fraxhost.goatcounter.com/counter/' +
-            encodeURIComponent(location.pathname) + '.json')
-            .then(function(r){ return r.json(); })
-            .then(function(d){ document.getElementById('gc-count').textContent = d.count; })
-            .catch(function(){});
+          fetch(
+            "https://fraxhost.goatcounter.com/counter/" +
+              encodeURIComponent(location.pathname) +
+              ".json",
+          )
+            .then(function (r) {
+              return r.json();
+            })
+            .then(function (d) {
+              document.getElementById("gc-count").textContent = d.count;
+            })
+            .catch(function () {});
         </script>
       </aside>
 

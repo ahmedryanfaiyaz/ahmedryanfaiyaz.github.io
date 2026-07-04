@@ -30,7 +30,7 @@ page_css: blog
     const body = document.querySelector(".post-body");
     const toc = document.getElementById("post-toc");
     const list = document.getElementById("toc-list");
-    const headings = body.querySelectorAll("h2, h3");
+    const headings = body.querySelectorAll("h1, h2, h3");
 
     if (!headings.length) {
       toc.style.display = "none";
@@ -40,7 +40,7 @@ page_css: blog
     headings.forEach((h) => {
       if (!h.id) h.id = h.textContent.trim().toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
       const li = document.createElement("li");
-      li.className = h.tagName === "H3" ? "toc-h3" : "";
+      li.className = h.tagName === "H3" ? "toc-h3" : h.tagName === "H2" ? "toc-h2" : "";
       const a = document.createElement("a");
       a.href = "#" + h.id;
       a.textContent = h.textContent;
@@ -86,3 +86,18 @@ page_css: blog
   });
   if (mermaidNodes.length) mermaid.run({ nodes: mermaidNodes });
 </script>
+
+{% if page.math %}
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$']],
+      displayMath: [['$$', '$$']],
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    }
+  };
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{% endif %}

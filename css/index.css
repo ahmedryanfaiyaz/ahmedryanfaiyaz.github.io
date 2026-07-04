@@ -110,3 +110,40 @@
     font-size: 1.15rem;
   }
 }
+
+/* ─── Education list (inlined from education page) ──── */
+
+.education-list {
+  padding: 0;
+  margin: 0;
+}
+
+.education-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--color-border);
+  list-style: none;
+}
+.education-list li:first-child { padding-top: 0; }
+
+.education-place {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.education-place p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.education-grade {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-top: 0.1rem;
+  margin-bottom: 0.15rem;
+  text-align: justify;
+}
