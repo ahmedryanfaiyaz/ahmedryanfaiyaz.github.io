@@ -1,18 +1,24 @@
-.experience-list li {
-  padding: 0.9rem 0;
+.experience-list > li {
+  padding: 0.55rem 0;
   border-bottom: 1px solid var(--color-border);
   list-style: none;
 }
-.experience-list li:first-child { padding-top: 0; }
+.experience-list > li:first-child { padding-top: 0; }
 
 .experience-designation {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--color-text-emphasized);
-  margin-top: 0.2rem;
+  margin-top: 0;
 }
 
-.experience-place { font-size: 0.9rem; }
+.experience-place {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
 
 .experience-place a {
   color: var(--color-text-muted);
@@ -20,9 +26,14 @@
 }
 .experience-place a:hover { color: var(--color-primary); }
 
+.experience-place p {
+  margin: 0;
+  flex-shrink: 0;
+}
+
 .experience-details {
-  margin-top: 0.4rem;
-  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0;
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -33,16 +44,17 @@
   font-weight: 500;
   color: var(--color-text-muted);
   font-family: var(--font-mono);
+  margin: 0;
 }
 
 .experience-details ul {
-  margin-left: 1.25rem;
+  margin-left: 0;
   padding-left: 0;
 }
 
 .experience-details li {
   font-size: 0.92rem;
   color: var(--color-text);
-  line-height: 1.7;
+  line-height: 1.35;
   text-align: justify;
 }
