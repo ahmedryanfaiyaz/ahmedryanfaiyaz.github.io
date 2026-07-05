@@ -138,6 +138,16 @@
   color: var(--color-text-muted);
   margin: 0;
 }
+.education-place a {
+  color: var(--color-text-muted);
+  text-decoration: underline dotted var(--color-border);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.education-place a:hover {
+  color: var(--color-primary);
+  text-decoration-color: var(--color-primary);
+}
 
 .education-grade {
   font-size: 0.9rem;
